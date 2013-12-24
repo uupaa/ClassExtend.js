@@ -23,7 +23,12 @@ $ npm test
     > uupaa.classextend.js@0.8.0 test /Users/username/path/ClassExtend.js
     > NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html
 
+      :
+      :
     test success.
     ok.
 ```
 
+# API Document
+
+https://github.com/uupaa/BinaryString.js/wiki/ClassExtend
