@@ -31,4 +31,4 @@ $ npm test
 
 # API Document
 
-https://github.com/uupaa/BinaryString.js/wiki/ClassExtend
+https://github.com/uupaa/ClassExtend.js/wiki/ClassExtend
