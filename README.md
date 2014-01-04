@@ -3,6 +3,10 @@ ClassExtend.js
 
 ClassExtend.js は、`class SubClass extends BaseClass { ... }` を JavaScript の上で実現する Function#extend を拡張します。
 
+# API Document
+
+https://github.com/uupaa/ClassExtend.js/wiki/ClassExtend
+
 # Install, Setup modules
 
 ```sh
@@ -28,7 +32,3 @@ $ npm test
     test success.
     ok.
 ```
-
-# API Document
-
-https://github.com/uupaa/ClassExtend.js/wiki/ClassExtend
