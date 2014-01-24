@@ -1,5 +1,4 @@
 
-// --- interface -------------------------------------------
 
     // --- Fish Class ---
     function Fish(arg) { // BaseClass Fish
@@ -36,7 +35,7 @@ new Test().add([
         testStaticObjectProperty,
         testSharedLiteralProperty,
         testSharedObjectProperty,
-    ]).run();
+    ]).run().worker();
 
 function testClassExtend(next) {
 
