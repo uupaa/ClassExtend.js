@@ -24,9 +24,11 @@ $ npm test
 # Minify
 
 ```sh
+$ brew install closure-compiler
 $ npm start
 
   or
 
+$ brew install closure-compiler
 $ node node_modules/uupaa.minify.js --keep --output ./lib/ClassExtend.min.js ./lib/ClassExtend.js
 ```
