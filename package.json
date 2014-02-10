@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.classextend.js",
-  "version":        "0.8.10",
+  "version":        "0.8.11",
   "description":    "Class Extends.",
   "url":            "https://github.com/uupaa/ClassExtend.js",
   "keywords":       ["Class", "extend", "util", "uupaa"],
@@ -15,7 +15,6 @@
   "dependencies": {
   },
   "devDependencies": {
-    "uupaa.mappedarray.js": "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",
     "uupaa.test.js":    "",
