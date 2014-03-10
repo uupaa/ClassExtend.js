@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.classextend.js",
-  "version":        "0.8.11",
+  "version":        "0.8.12",
   "description":    "Class Extends.",
   "url":            "https://github.com/uupaa/ClassExtend.js",
   "keywords":       ["Class", "extend", "util", "uupaa"],
@@ -9,8 +9,17 @@
     "url":          "https://github.com/uupaa/ClassExtend.js.git"
   },
   "scripts": {
-    "start":        "node node_modules/uupaa.minify.js --keep --output ./lib/ClassExtend.min.js ./lib/ClassExtend.js",
-    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html"
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build ./lib/ClassExtend.js",
+    "build":        "node node_modules/uupaa.minify.js --keep --option 'formatting pretty_print' --output ./lib/ClassExtend.min.js ./lib/ClassExtend.js",
+    "build-release":"node node_modules/uupaa.minify.js --module all --output ./lib/ClassExtend.min.js",
+    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html",
+    "lint":         "plato --title ClassExtend.js --jshint .jshintrc -d lint/plato lib/ClassExtend.js; open lint/plato/index.html"
+  },
+  "build": {
+    "all": { "lib/ClassExtend.js": "" },
+    "node": { },
+    "worker": { },
+    "browser": { }
   },
   "dependencies": {
   },

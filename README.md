@@ -3,33 +3,70 @@ ClassExtend.js
 
 ClassExtend.js is class extends mechanism.
 
-# API Document
+# Document
 
 https://github.com/uupaa/ClassExtend.js/wiki/ClassExtend
 
-# Install, Setup modules
+# How to use
 
-```sh
-$ brew install closure-compiler
+```js
+<script src="lib/ClassExtend.js">
+<script>
+// for Browser
+function ClassFoo() {}
+function ClassBar(arg) { ClassFoo.call(this, arg); }
 
-$ git clone git@github.com:uupaa/ClassExtend.js.git
-$ cd ClassExtend.js
-$ npm install
+ClassBar.extend(ClassFoo);
+</script>
 ```
 
-# Minify
+```js
+// for WebWorkers
+importScripts("lib/ClassExtend.js");
 
-```sh
-$ npm start
+function ClassFoo() {}
+function ClassBar(arg) { ClassFoo.call(this, arg); }
 
-  or
-
-$ node node_modules/uupaa.minify.js --keep --output ./lib/ClassExtend.min.js ./lib/ClassExtend.js
+ClassBar.extend(ClassFoo);
 ```
 
-# Test
+```js
+// for Node.js
+var ClassExtend = require("lib/ClassExtend.js");
 
-```sh
-$ npm test
+function ClassFoo() {}
+function ClassBar(arg) { ClassFoo.call(this, arg); }
+
+ClassBar.extend(ClassFoo);
 ```
+
+# for Developers
+
+1. Install development dependency tools
+
+    ```sh
+    $ brew install closure-compiler
+    $ brew install node
+    $ npm install -g plato
+    ```
+
+2. Clone Repository and Install
+
+    ```sh
+    $ git clone git@github.com:uupaa/ClassExtend.js.git
+    $ cd ClassExtend.js
+    $ npm install
+    ```
+
+3. Build and Minify
+
+    `$ npm run build`
+
+4. Test
+
+    `$ npm run test`
+
+5. Lint
+
+    `$ npm run lint`
 
