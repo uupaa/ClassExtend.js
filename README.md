@@ -1,7 +1,7 @@
 ClassExtend.js
 =========
 
-ClassExtend.js is class extends mechanism.
+Class extends mechanism.
 
 # Document
 
