@@ -1,7 +1,7 @@
 {
   "name":           "uupaa.classextend.js",
-  "version":        "0.8.13",
-  "description":    "Class Extends.",
+  "version":        "0.8.14",
+  "description":    "Class extends mechanism.",
   "url":            "https://github.com/uupaa/ClassExtend.js",
   "keywords":       ["Class", "extend", "util", "uupaa"],
   "repository": {
@@ -9,24 +9,26 @@
     "url":          "https://github.com/uupaa/ClassExtend.js.git"
   },
   "scripts": {
-    "watch":        "node node_modules/uupaa.watch.js --verbose --action build ./lib/ClassExtend.js",
-    "build":        "node node_modules/uupaa.minify.js --keep --option 'formatting pretty_print' --output ./lib/ClassExtend.min.js ./lib/ClassExtend.js",
-    "build-release":"node node_modules/uupaa.minify.js --module all --output ./lib/ClassExtend.min.js",
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
+    "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
+    "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
+    "build-release":"node node_modules/uupaa.minify.js --verbose --strict --module",
     "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html",
-    "lint":         "plato --title ClassExtend.js --jshint .jshintrc -d lint/plato lib/ClassExtend.js; open lint/plato/index.html"
+    "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
-  "build": {
-    "all": { "lib/ClassExtend.js": "" },
-    "node": { },
-    "worker": { },
-    "browser": { }
+  "x-build": {
+    "inputs":       ["lib/ClassExtend.js"],
+    "output":       "lib/ClassExtend.min.js"
   },
   "dependencies": {
   },
   "devDependencies": {
+    "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",
     "uupaa.test.js":    "",
+    "uupaa.watch.js":   "",
+    "uupaa.plato.js":   "",
     "uupaa.minify.js":  ""
   },
   "lib":            "./lib/",

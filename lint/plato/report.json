@@ -1,1 +1,63 @@
-{"summary":{"total":{"sloc":35,"maintainability":69.15757497097216},"average":{"sloc":35,"maintainability":"69.16"}},"reports":[{"info":{"file":"lib/ClassExtend.js","fileShort":"lib/ClassExtend.js","fileSafe":"lib_ClassExtend_js","link":"files/lib_ClassExtend_js/index.html"},"jshint":{"messages":0},"complexity":{"aggregate":{"line":3,"complexity":{"sloc":{"physical":35,"logical":19},"cyclomatic":5,"halstead":{"operators":{"distinct":11,"total":44,"identifiers":["__stripped__"]},"operands":{"distinct":15,"total":47,"identifiers":["__stripped__"]},"length":91,"vocabulary":26,"difficulty":17.233333333333334,"volume":427.74001435083943,"effort":7371.3862473128,"bugs":0.14258000478361316,"time":409.52145818404443},"params":1}},"module":"lib/ClassExtend.js","maintainability":69.15757497097216}}]}
+{
+  "reports": [
+    {
+      "info": {
+        "file": "lib/ClassExtend.js",
+        "fileShort": "lib/ClassExtend.js",
+        "fileSafe": "lib_ClassExtend_js",
+        "link": "files/lib_ClassExtend_js/index.html"
+      },
+      "jshint": {
+        "messages": 0
+      },
+      "complexity": {
+        "aggregate": {
+          "line": 3,
+          "complexity": {
+            "sloc": {
+              "physical": 35,
+              "logical": 19
+            },
+            "cyclomatic": 5,
+            "halstead": {
+              "operators": {
+                "distinct": 11,
+                "total": 44,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "operands": {
+                "distinct": 15,
+                "total": 47,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "length": 91,
+              "vocabulary": 26,
+              "difficulty": 17.233333333333334,
+              "volume": 427.74001435083943,
+              "effort": 7371.3862473128,
+              "bugs": 0.14258000478361316,
+              "time": 409.52145818404443
+            },
+            "params": 1
+          }
+        },
+        "module": "lib/ClassExtend.js",
+        "maintainability": 69.15757497097216
+      }
+    }
+  ],
+  "summary": {
+    "total": {
+      "sloc": 35,
+      "maintainability": 69.15757497097216
+    },
+    "average": {
+      "sloc": 35,
+      "maintainability": "69.16"
+    }
+  }
+}
