@@ -1,9 +1,9 @@
 {
   "name":           "uupaa.classextend.js",
-  "version":        "0.8.14",
+  "version":        "0.8.15",
   "description":    "Class extends mechanism.",
   "url":            "https://github.com/uupaa/ClassExtend.js",
-  "keywords":       ["Class", "extend", "util", "uupaa"],
+  "keywords":       ["Class", "extend", "util", "uupaa", "WebModule"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/uupaa/ClassExtend.js.git"
@@ -18,11 +18,12 @@
   },
   "x-build": {
     "inputs":       ["lib/ClassExtend.js"],
-    "output":       "lib/ClassExtend.min.js"
+    "output":       "release/ClassExtend.min.js"
   },
   "dependencies": {
   },
   "devDependencies": {
+    "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",
