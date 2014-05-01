@@ -1,4 +1,4 @@
-
+var ModuleTest = (function(global) {
 
     // --- Fish Class ---
     function Fish(arg) { // BaseClass Fish
@@ -29,13 +29,24 @@
     Human.prototype.jump = function() { return "i can fly"; }; // override Fish#jump
 
 // --- implement -------------------------------------------
-new Test().add([
+var items = [
         testClassExtend,
         testStaticLiteralProperty,
         testStaticObjectProperty,
         testSharedLiteralProperty,
         testSharedObjectProperty,
-    ]).run().worker();
+    ];
+
+new Test({
+        disable:    false,
+        node:       true,
+        browser:    true,
+        worker:     true,
+        button:     true,
+        both:       false,
+        primary:    global, // dummy
+        secondary:  global, // dummy
+    }).add(items).run();
 
 function testClassExtend(next) {
 
@@ -214,4 +225,7 @@ function testSharedObjectProperty(next) {
     console.log("testSharedObjectProperty ng");
     next && next.miss();
 }
+
+return items;
+})((this || 0).self || global);
 
