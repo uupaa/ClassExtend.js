@@ -1,4 +1,4 @@
-var ModuleTest = (function(global) {
+var ModuleTestClassExtend = (function(global) {
 
     // --- Fish Class ---
     function Fish(arg) { // BaseClass Fish
@@ -29,24 +29,20 @@ var ModuleTest = (function(global) {
     Human.prototype.jump = function() { return "i can fly"; }; // override Fish#jump
 
 // --- implement -------------------------------------------
-var items = [
+return new Test("ClassExtend", {
+        disable:    false,
+        browser:    true,
+        worker:     true,
+        node:       true,
+        button:     true,
+        both:       false,
+    }).add([
         testClassExtend,
         testStaticLiteralProperty,
         testStaticObjectProperty,
         testSharedLiteralProperty,
         testSharedObjectProperty,
-    ];
-
-new Test({
-        disable:    false,
-        node:       true,
-        browser:    true,
-        worker:     true,
-        button:     true,
-        both:       false,
-        primary:    global, // dummy
-        secondary:  global, // dummy
-    }).add(items).run();
+    ]).run().clone();
 
 function testClassExtend(next) {
 
@@ -70,14 +66,12 @@ function testClassExtend(next) {
                     ponyo.jump() === "jump" &&
                     human.jump() === "i can fly") {
 
-                    console.log("testClassExtend ok");
                     next && next.pass();
                     return;
                 }
             }
         }
     }
-    console.log("testClassExtend ng");
     next && next.miss();
 }
 
@@ -104,12 +98,10 @@ function testStaticLiteralProperty(next) {
             Ponyo.staticLiteral === "new Ponyo.staticLiteral" &&
             Human.staticLiteral === "new Human.staticLiteral") {
 
-            console.log("testStaticLiteralProperty ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testStaticLiteralProperty ng");
     next && next.miss();
 }
 
@@ -136,12 +128,10 @@ function testStaticObjectProperty(next) {
             Ponyo.staticObject.value === "new Ponyo.staticObject" &&
             Human.staticObject.value === "new Human.staticObject") {
 
-            console.log("testStaticObjectProperty ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testStaticObjectProperty ng");
     next && next.miss();
 }
 
@@ -173,12 +163,10 @@ function testSharedLiteralProperty(next) {
             ponyo.sharedLiteral === "new Ponyo#sharedLiteral" &&
             human.sharedLiteral === "new Human#sharedLiteral") {
 
-            console.log("testSharedLiteralProperty ok");
             next && next.pass();
             return;
         }
     }
-    console.log("testSharedLiteralProperty ng");
     next && next.miss();
 }
 
@@ -216,16 +204,13 @@ function testSharedObjectProperty(next) {
                 ponyo.sharedObject.value === "new Ponyo#sharedObject" &&
                 human.sharedObject.value === "new Human#sharedObject") {
 
-                console.log("testSharedObjectProperty ok");
                 next && next.pass();
                 return;
             }
         }
     }
-    console.log("testSharedObjectProperty ng");
     next && next.miss();
 }
 
-return items;
 })((this || 0).self || global);
 
