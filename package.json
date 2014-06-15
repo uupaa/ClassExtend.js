@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.classextend.js",
-  "version":        "0.8.23",
+  "version":        "0.8.24",
   "description":    "Class extends mechanism.",
   "url":            "https://github.com/uupaa/ClassExtend.js",
   "keywords":       ["Class", "extend", "util", "uupaa", "WebModule"],
@@ -21,7 +21,7 @@
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
-    "files":        ["lib/ClassExtend.js"],
+    "source":       ["lib/ClassExtend.js"],
     "output":       "release/ClassExtend.min.js",
     "target":       ["all"],
     "module": {
