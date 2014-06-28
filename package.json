@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.classextend.js",
-  "version":        "0.8.24",
+  "version":        "0.8.25",
   "description":    "Class extends mechanism.",
   "url":            "https://github.com/uupaa/ClassExtend.js",
   "keywords":       ["Class", "extend", "util", "uupaa", "WebModule"],
