@@ -1,9 +1,9 @@
 {
   "name":           "uupaa.classextend.js",
-  "version":        "0.8.25",
+  "version":        "0.8.26",
   "description":    "Class extends mechanism.",
   "url":            "https://github.com/uupaa/ClassExtend.js",
-  "keywords":       ["Class", "extend", "util", "uupaa", "WebModule"],
+  "keywords":       ["Class", "extend", "util", "uupaa", "WebModule", "Unstable"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/uupaa/ClassExtend.js.git"
@@ -22,12 +22,14 @@
     "server":       "http-server -c-1 -p 8585 &",
     "server-stop":  "",
     "server-kill":  "killall -- node /usr/local/bin/http-server -p 8585 ; exit 0",
+    "hint":         "jshint lib/*.js",
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
     "source":       ["lib/ClassExtend.js"],
     "output":       "release/ClassExtend.min.js",
     "target":       ["all"],
+    "label":        ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
       "release":    []
@@ -37,6 +39,8 @@
   },
   "devDependencies": {
     "uupaa.nodemodule.js": "",
+    "uupaa.reflection.js": "",
+    "uupaa.iphonesimulator.js": "",
     "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
